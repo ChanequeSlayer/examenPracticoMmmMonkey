@@ -1,7 +1,7 @@
 package cadenacomercial;
 
 import javax.swing.JOptionPane;
-import static javax.swing.JOptionPane.OK_CANCEL_OPTION;
+import static  javax.swing.JOptionPane.OK_CANCEL_OPTION;
 
 public class Trabajadores {
     private String id = new String();
@@ -21,6 +21,7 @@ public class Trabajadores {
         this.id = id;
         this.pass = pass;
         this.name = name;
+ 
         conf = JOptionPane.showConfirmDialog(null,"Confirmacion de Registro \n"
                 + "----------------------------- \n "
                 + id +"\n"
@@ -53,9 +54,9 @@ public class Trabajadores {
         puesto="Empleado";
         
         if(id.equals("123ABCOXXO")||id.equals("SABRI0101")){
-            puesto="Gerente";
-                
+            puesto="Gerente";       
             }
+        
         return puesto;
     }
 }

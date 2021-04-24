@@ -1,8 +1,11 @@
 package cadenacomercial;
 
 public class Empleado extends Gerente{
-    public Empleado(){
-        
+    int paga;
+
+    public Empleado(String id, String pass) {
+        super(id, pass);
     }
+
 
 }

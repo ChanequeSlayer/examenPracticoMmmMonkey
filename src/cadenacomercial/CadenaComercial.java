@@ -1,4 +1,5 @@
 package cadenacomercial;
+
 //Importamos el JOptionPane para poder usarlo.
 import javax.swing.JOptionPane;
 //Our Clase
@@ -24,10 +25,12 @@ public class CadenaComercial {
                 JOptionPane.showMessageDialog(null, "Iniciado con exito");
 
                 if (existente.puesto(id, pass).equals("Gerente")) {
-                    Gerente vip = new Gerente();
-
+                    Gerente vip = new Gerente(id,pass);
+                    vip.showUser(id, pass);
+                    vip.Cobrar();
+                    
                 } else {
-                    Empleado gen = new Empleado();
+                    Empleado gen = new Empleado(id,pass);
 
                 }
 
