@@ -1,15 +1,19 @@
 package cadenacomercial;
 import java.util.Calendar;
 import javax.swing.JOptionPane;
+//Clase productos.
 public class Productos {
+    //Atributos de la clase productos.
     private String id;
     private String name;
+    //objeto de la clase Calendar para usar una variable-objeto, con caracteristicas de fecha.
     private Calendar cad = Calendar.getInstance();
     private double precio;
     private int cant;
     private String marca;
+    //Variable-atributo para llevar una lista de lo que lleva el cliente.
     private String lista;
-    
+    //Metodo Constructor
     public Productos(){
         lista ="Lista: \n";
         id = "N1";
@@ -19,6 +23,7 @@ public class Productos {
         cant = 20;
         marca = "Bimbo";
     }
+    //Metodo para listar los productos.
     public String listP(){
         String d = "Si";
         do{

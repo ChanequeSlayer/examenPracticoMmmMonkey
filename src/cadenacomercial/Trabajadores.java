@@ -4,12 +4,15 @@ import javax.swing.JOptionPane;
 import static  javax.swing.JOptionPane.OK_CANCEL_OPTION;
 
 public class Trabajadores {
+    //Declaramos los atributos de trabajadores
     private String id = new String();
     private String pass = new String();
     private String name = new String();
+    //variable de confirmacion
     private int conf;
+    //objeto para regresar el puesto de la persona.
     private String puesto = new String();
-    
+    //El constructor
     public Trabajadores(){
         id = "0123ABC";
         pass="0000";
@@ -17,6 +20,7 @@ public class Trabajadores {
         conf=0;
         
     }
+    //Metodo trabajadores para hacer el registro.
     public Trabajadores(String id, String pass,String name){
         this.id = id;
         this.pass = pass;
@@ -35,12 +39,13 @@ public class Trabajadores {
         }
         
     }
-
+    //Metodo para limpiar el registro
     public void clean(String id, String pass,String name){
       this.id="";
       this.pass="";
       this.name="";  
     }
+    //Compruba el inicio de sesion.
     public boolean comprobacion(String id, String pass){
         boolean user= false;
         if(id.equals("123ABCOXXO")&&pass.equals("oxxoxsiempre")||id.equals("SABRI0101")&&pass.equals("mecomiunasal")||
@@ -50,6 +55,7 @@ public class Trabajadores {
         }
         return user;
     }
+    //Verifica el puesto de la persona.
     public String puesto(String id,String pass){
         puesto="Empleado";
         
