@@ -1,6 +1,10 @@
 package cadenacomercial;
 
 //Importamos el JOptionPane para poder usarlo.
+import java.awt.Color;
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 //Our Clase Principal donde tenemos el main
 
@@ -64,9 +68,17 @@ public class CadenaComercial {
         } else {
             //Si selecciona la opcion 3.
             JOptionPane.showMessageDialog(null, "Regrese pronto...");
-            System.exit(0);
-        }
+            
+            Interfaz interfaz = new Interfaz();
 
+            //System.exit(0);
+        }
+        
+        //gui
+        //Interfaz interfaz = new Interfaz();
+        
+        
+        
     }
 
 }
