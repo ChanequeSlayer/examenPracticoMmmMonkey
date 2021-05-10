@@ -6,9 +6,13 @@ import java.awt.Toolkit;
 
 public class interfazreg extends javax.swing.JFrame {
 
-    
+    public int c=0;
     public interfazreg() {
         initComponents();
+        userJTF.setText("Usuario");
+        nameJTF.setText("Usuario");
+        userJTF.setFocusable(false);
+        salir.setFocusable(true);
         this.setLocationRelativeTo(null);
     }
     public Image getIconImage() {
@@ -62,11 +66,15 @@ public class interfazreg extends javax.swing.JFrame {
 
         nameJTF.setFont(new java.awt.Font("Montserrat", 1, 15)); // NOI18N
         nameJTF.setForeground(new java.awt.Color(255, 204, 0));
-        nameJTF.setText("Usuario");
         nameJTF.setBorder(null);
         nameJTF.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         nameJTF.setSelectedTextColor(new java.awt.Color(255, 255, 255));
         nameJTF.setSelectionColor(new java.awt.Color(255, 51, 51));
+        nameJTF.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                nameJTFMouseClicked(evt);
+            }
+        });
         getContentPane().add(nameJTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 380, 280, 50));
         nameJTF.setOpaque(false);
         nameJTF.getAccessibleContext().setAccessibleName("");
@@ -76,11 +84,15 @@ public class interfazreg extends javax.swing.JFrame {
 
         userJTF.setFont(new java.awt.Font("Montserrat", 1, 15)); // NOI18N
         userJTF.setForeground(new java.awt.Color(255, 204, 0));
-        userJTF.setText("Usuario");
         userJTF.setBorder(null);
         userJTF.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         userJTF.setSelectedTextColor(new java.awt.Color(255, 255, 255));
         userJTF.setSelectionColor(new java.awt.Color(255, 51, 51));
+        userJTF.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                userJTFMouseClicked(evt);
+            }
+        });
         getContentPane().add(userJTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 440, 280, 50));
         userJTF.setOpaque(false);
 
@@ -88,7 +100,6 @@ public class interfazreg extends javax.swing.JFrame {
         getContentPane().add(cuadroTxt3, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 440, -1, -1));
 
         passJPF.setForeground(new java.awt.Color(255, 204, 0));
-        passJPF.setText("jPasswordField1");
         passJPF.setBorder(null);
         passJPF.setSelectedTextColor(new java.awt.Color(255, 255, 255));
         passJPF.setSelectionColor(new java.awt.Color(255, 51, 51));
@@ -99,7 +110,6 @@ public class interfazreg extends javax.swing.JFrame {
         getContentPane().add(cuadroTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 500, -1, -1));
 
         passJPF2.setForeground(new java.awt.Color(255, 204, 0));
-        passJPF2.setText("jPasswordField1");
         passJPF2.setBorder(null);
         passJPF2.setSelectedTextColor(new java.awt.Color(255, 255, 255));
         passJPF2.setSelectionColor(new java.awt.Color(255, 51, 51));
@@ -160,6 +170,20 @@ public class interfazreg extends javax.swing.JFrame {
     private void jBrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBrActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jBrActionPerformed
+
+    private void nameJTFMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nameJTFMouseClicked
+        if (c == 0){
+            userJTF.setText("");
+            c++;
+        }
+    }//GEN-LAST:event_nameJTFMouseClicked
+
+    private void userJTFMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_userJTFMouseClicked
+        if (c == 0){
+            userJTF.setText("");
+            c++;
+        }
+    }//GEN-LAST:event_userJTFMouseClicked
 
     /**
      * @param args the command line arguments
