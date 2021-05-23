@@ -1,9 +1,8 @@
-package cadenacomercial;
+package cadenacomercial;//Ray
 
 //Importamos el JOptionPane para poder usarlo.
 import javax.swing.JOptionPane;
 //Our Clase Principal donde tenemos el main
-
 public class CadenaComercial {
 //Clase main
 
@@ -35,7 +34,7 @@ public class CadenaComercial {
             //Comprobacion para comprobar que el usuario si es usuario.
             if (existente.comprobacion(id, pass) == true) {
                 JOptionPane.showMessageDialog(null, "Iniciado con exito");
-            //Si coinciden la id y el password, da exito de conexion.
+     //Raymundo       //Si coinciden la id y el password, da exito de conexion.
             //Si coincide con un id y pass de gerente entonces se da lugar a Gerente.
                 if (existente.puesto(id, pass).equals("Gerente")) {
                     Gerente vip = new Gerente(id, pass);
@@ -70,3 +69,4 @@ public class CadenaComercial {
     }
 
 }
+//Alex

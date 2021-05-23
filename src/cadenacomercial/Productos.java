@@ -6,6 +6,7 @@ public class Productos {
     //Atributos de la clase productos.
     private String id;
     private String name;
+    String d = "Si";
     //objeto de la clase Calendar para usar una variable-objeto, con caracteristicas de fecha.
     private Calendar cad = Calendar.getInstance();
     private double precio;
@@ -15,7 +16,7 @@ public class Productos {
     private String lista;
     //Metodo Constructor
     public Productos(){
-        lista ="Lista: \n";
+        lista ="Lista: \n\n";
         id = "N1";
         name = "Negrito";
         cad.set(2022, 04, 24);
@@ -25,8 +26,7 @@ public class Productos {
     }
     //Metodo para listar los productos.
     public String listP(){
-        String d = "Si";
-        do{
+        while(d.equalsIgnoreCase("Si")||d.equalsIgnoreCase("1")){
         name = JOptionPane.showInputDialog("¿Que producto es?\n"
                         + "(Ingrese ID o nombre)\n");
         cant = Integer.parseInt(JOptionPane.showInputDialog("¿Cuantos?\n"
@@ -42,10 +42,9 @@ public class Productos {
         d=JOptionPane.showInputDialog(null,"Va a ingresar otro articulo? \n"
                 + "Ingrese 1 o Si, si va a ingresar mas articulos \n"
                 + "Ingrese 2 o No, si NO va a ingresar mas articulos");
-            
-        }while(d.equalsIgnoreCase("Si")||d.equalsIgnoreCase("1"));
+        }
         
-        lista+="\n"
+        lista+="\n\n"
                 + "---------------------";
         return lista;
         

@@ -6,6 +6,7 @@ import static javax.swing.JOptionPane.PLAIN_MESSAGE;
 public class Gerente extends Trabajadores{
     private String permisos = new String();
     private String nombre = new String();
+    private String factura="";
     
     //Constructor
     public Gerente(String id, String pass){
@@ -35,11 +36,17 @@ public class Gerente extends Trabajadores{
         switch(d){
             case 1:
                 Productos p = new Productos();
+                factura = p.listP();
                 JOptionPane.showMessageDialog(null,p.listP());
+                break;
+            case 2:
+                Facturacion one = new Facturacion();
+                    one.Facturar(factura);
+                    break;
+                
             
         }
         }while(d!=3);
- 
     }
     
 
